@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="promises">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/promises.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/promises.jar!/" />
+    </SOURCES>
+  </library>
+</component>
