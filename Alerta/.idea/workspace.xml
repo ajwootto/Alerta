@@ -92,21 +92,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="131" selection-start="2751" selection-end="2751" vertical-scroll-proportion="-4.3333335" vertical-offset="952" max-vertical-offset="2584">
+            <state line="147" column="9" selection-start="5886" selection-end="5886" vertical-scroll-proportion="-1.3893511" vertical-offset="3334" max-vertical-offset="4216">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#732#747#0" expanded="true" />
-                <element signature="e#1350#1618#0" expanded="true" />
-                <element signature="e#1607#1608#0" expanded="true" />
-                <element signature="e#1912#2843#0" expanded="true" />
-                <element signature="e#2832#2833#0" expanded="true" />
-                <element signature="e#2918#3151#0" expanded="true" />
-                <element signature="e#3140#3141#0" expanded="true" />
-                <element signature="e#5225#5543#0" expanded="true" />
-                <element signature="e#5528#5529#0" expanded="true" />
+                <element signature="e#914#929#0" expanded="true" />
+                <element signature="e#1847#2115#0" expanded="true" />
+                <element signature="e#2104#2105#0" expanded="true" />
+                <element signature="e#3802#4690#0" expanded="true" />
+                <element signature="e#4671#4672#0" expanded="true" />
+                <element signature="e#6177#6325#0" expanded="true" />
+                <element signature="e#6314#6315#0" expanded="true" />
+                <element signature="e#6400#6633#0" expanded="true" />
+                <element signature="e#6622#6623#0" expanded="true" />
+                <element signature="e#8707#9025#0" expanded="true" />
+                <element signature="e#9010#9011#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,7 +117,7 @@
       <file leaf-file-name="PickedContact.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/datatypes/PickedContact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+            <state line="16" column="46" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
@@ -169,10 +171,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="19" selection-start="950" selection-end="950" vertical-scroll-proportion="0.5800525" vertical-offset="0" max-vertical-offset="762">
+            <state line="16" column="40" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
               <folding>
                 <element signature="e#542#560#0" expanded="true" />
                 <element signature="e#706#724#0" expanded="true" />
@@ -209,8 +211,8 @@
         <option value="$PROJECT_DIR$/src/com/hackmit/alerta/adapters/PeopleAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/hackmit/alerta/utils/PreferenceUtils.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/src/com/hackmit/alerta/MainActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/hackmit/alerta/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -428,11 +430,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="X:\Programming\ANDROID\Alerta\Alerta\libs" />
       <recent name="X:\Programming\ANDROID\Alerta\Alerta\res\drawable-xxhdpi" />
       <recent name="X:\Programming\ANDROID\Alerta\Alerta\src\com\hackmit\alerta\adapters" />
       <recent name="X:\Programming\ANDROID\Alerta\Alerta\res\layout" />
       <recent name="X:\Programming\ANDROID\Alerta\Alerta\src\com\hackmit\alerta" />
-      <recent name="X:\Programming\ANDROID\Alerta\Alerta\src\com\hackmit\alerta\datatypes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="X:\Programming\ANDROID\Alerta\Alerta\res\drawable-xxhdpi" />
@@ -613,8 +615,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1072572" sideWeight="0.87652946" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12347052" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1072572" sideWeight="0.7541713" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2458287" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -711,31 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/adapters/PeopleAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="26" selection-start="3808" selection-end="3808" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1887">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#781#796#0" expanded="true" />
-            <element signature="e#1884#2296#0" expanded="true" />
-            <element signature="e#2285#2286#0" expanded="true" />
-            <element signature="e#2338#3742#0" expanded="true" />
-            <element signature="e#3055#3390#0" expanded="true" />
-            <element signature="e#3367#3368#0" expanded="true" />
-            <element signature="e#3448#3663#0" expanded="true" />
-            <element signature="e#3640#3641#0" expanded="true" />
-            <element signature="e#3731#3732#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/datatypes/PickedContact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-3.8" vertical-offset="262" max-vertical-offset="986">
@@ -756,30 +733,57 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="131" selection-start="2751" selection-end="2751" vertical-scroll-proportion="-4.3333335" vertical-offset="952" max-vertical-offset="2584">
+        <state line="16" column="40" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#732#747#0" expanded="true" />
-            <element signature="e#1350#1618#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#1912#2843#0" expanded="true" />
-            <element signature="e#2832#2833#0" expanded="true" />
-            <element signature="e#2918#3151#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-            <element signature="e#5225#5543#0" expanded="true" />
-            <element signature="e#5528#5529#0" expanded="true" />
+            <element signature="e#542#560#0" expanded="true" />
+            <element signature="e#706#724#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/adapters/PeopleAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="19" selection-start="950" selection-end="950" vertical-scroll-proportion="0.5800525" vertical-offset="0" max-vertical-offset="762">
+        <state line="101" column="26" selection-start="3808" selection-end="3808" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1887">
           <folding>
-            <element signature="e#542#560#0" expanded="true" />
-            <element signature="e#706#724#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#781#796#0" expanded="true" />
+            <element signature="e#1884#2296#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="e#2338#3742#0" expanded="true" />
+            <element signature="e#3055#3390#0" expanded="true" />
+            <element signature="e#3367#3368#0" expanded="true" />
+            <element signature="e#3448#3663#0" expanded="true" />
+            <element signature="e#3640#3641#0" expanded="true" />
+            <element signature="e#3731#3732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/datatypes/PickedContact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="46" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hackmit/alerta/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="9" selection-start="5886" selection-end="5886" vertical-scroll-proportion="-1.3893511" vertical-offset="3334" max-vertical-offset="4216">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#914#929#0" expanded="true" />
+            <element signature="e#1847#2115#0" expanded="true" />
+            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#3802#4690#0" expanded="true" />
+            <element signature="e#4671#4672#0" expanded="true" />
+            <element signature="e#6177#6325#0" expanded="true" />
+            <element signature="e#6314#6315#0" expanded="true" />
+            <element signature="e#6400#6633#0" expanded="true" />
+            <element signature="e#6622#6623#0" expanded="true" />
+            <element signature="e#8707#9025#0" expanded="true" />
+            <element signature="e#9010#9011#0" expanded="true" />
           </folding>
         </state>
       </provider>
