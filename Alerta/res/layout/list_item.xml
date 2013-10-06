@@ -27,11 +27,11 @@
                   android:id="@+id/linearLayout"></LinearLayout>
 
     <ImageView
-            android:layout_width="60dip"
-            android:layout_height="30dip"
-            android:scaleType="fitXY"
+            android:layout_width="65dip"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
             android:id="@+id/imageView"
-            android:src="@drawable/icon"
+            android:src="@drawable/deficon"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignBottom="@+id/linearLayout"/>
@@ -39,7 +39,6 @@
     <ImageView
             android:layout_width="wrap_content"
             android:padding="20dp"
-
             android:layout_height="wrap_content"
             android:id="@+id/minusButton"
             android:src="@drawable/minusicon"

@@ -22,6 +22,7 @@ import com.hackmit.alerta.utils.PreferenceUtils;
 import com.vicv.promises.Promise;
 import com.vicv.promises.PromiseListener;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -179,6 +180,7 @@ public class MainActivity extends Activity {
         String name = "";
         String number = "";
         String email = "";
+        String image = "";
 
         if (resultCode == Activity.RESULT_OK) {
             Uri contactData = data.getData();
@@ -192,6 +194,35 @@ public class MainActivity extends Activity {
                 String hasPhone =
                         c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
 
+                final String photoId = c.getString(
+                        c.getColumnIndex(ContactsContract.Contacts.PHOTO_ID));
+
+                // Get photo data for this contact
+                if (photoId != null) {
+                    final Cursor photo = managedQuery(
+                            ContactsContract.Data.CONTENT_URI,
+                            new String[]{ContactsContract.Contacts.Photo.PHOTO}, // column for the photo blob
+                            ContactsContract.Data._ID + "=?", // select row by id
+                            new String[]{photoId}, // filter by photoId
+                            null
+                    );
+
+                    // Convert photo blob to a bitmap
+                    if (photo.moveToFirst()) {
+                        byte[] photoBlob = photo.getBlob(
+                                photo.getColumnIndex(ContactsContract.Contacts.Photo.PHOTO));
+
+                        try {
+                            image = new String(photoBlob, "UTF-8");
+                        } catch (UnsupportedEncodingException e) {
+                            //whatever its a hackathon
+                        }
+
+
+                    }
+
+
+                }
 
                 if (hasPhone.equalsIgnoreCase("1")) {
                     Cursor phones = getContentResolver().query(
@@ -215,23 +246,25 @@ public class MainActivity extends Activity {
                 } catch (Exception e) {
 
                 }
-
             }
-            PickedContact newContact = new PickedContact(name, number, email, "");
-
-            Promise<ArrayList<PickedContact>> updatePromise = PreferenceUtils.storeContact(newContact, this);
-            updatePromise.add(new PromiseListener<ArrayList<PickedContact>>() {
-                @Override
-                public void succeeded(ArrayList<PickedContact> result) {
-                    _contacts = result;
-                    _adapter.notifyDataSetChanged();
-                    super.succeeded(result);
-                }
-            });
 
 
-            super.onActivityResult(requestCode, resultCode, data);
         }
+        PickedContact newContact = new PickedContact(name, number, email, "", image);
+
+        Promise<ArrayList<PickedContact>> updatePromise = PreferenceUtils.storeContact(newContact, this);
+        updatePromise.add(new PromiseListener<ArrayList<PickedContact>>() {
+            @Override
+            public void succeeded(ArrayList<PickedContact> result) {
+                _contacts = result;
+                _adapter.notifyDataSetChanged();
+                super.succeeded(result);
+            }
+        });
+
+
+        super.onActivityResult(requestCode, resultCode, data);
+
     }
 
     public static void vibrateWatch(Context c) {

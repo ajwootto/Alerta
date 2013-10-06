@@ -2,6 +2,7 @@ package com.hackmit.alerta.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 
 import com.hackmit.alerta.datatypes.PickedContact;
 import com.vicv.promises.Promise;
@@ -85,6 +86,7 @@ public class PreferenceUtils {
                 object.put("email", contact.getEmail());
                 object.put("number", contact.getNumber());
                 object.put("message", contact.getMessage());
+                object.put("photo", contact.getPhoto());
 
             } catch (JSONException e) {
                 //ffffffffuuuu
@@ -98,7 +100,7 @@ public class PreferenceUtils {
         ArrayList<PickedContact> contacts = new ArrayList<PickedContact>();
         for (int i = 0; i < array.length(); i++) {
             try {
-                PickedContact contact = new PickedContact(((JSONObject) array.get(i)).optString("name"), ((JSONObject) array.get(i)).optString("number"), ((JSONObject) array.get(i)).optString("email"), ((JSONObject) array.get(i)).optString("message"));
+                PickedContact contact = new PickedContact(((JSONObject) array.get(i)).optString("name"), ((JSONObject) array.get(i)).optString("number"), ((JSONObject) array.get(i)).optString("email"), ((JSONObject) array.get(i)).optString("message"), ((JSONObject) array.get(i)).optString("photo"));
                 contacts.add(contact);
             } catch (JSONException e) {
 

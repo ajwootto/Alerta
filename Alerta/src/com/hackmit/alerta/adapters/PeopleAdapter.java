@@ -41,6 +41,7 @@ public class PeopleAdapter extends ArrayAdapter<PickedContact> {
             convertView = mInflater.inflate(R.layout.list_item, null);
             holder = new LocationViewHolder();
             holder.name = (TextView) convertView.findViewById(R.id.name);
+            holder.image = (ImageView) convertView.findViewById(R.id.imageView);
             holder.minus = (ImageView) convertView.findViewById(R.id.minusButton);
             convertView.setTag(holder);
         } else {
@@ -50,6 +51,16 @@ public class PeopleAdapter extends ArrayAdapter<PickedContact> {
         holder.name.setText(contacts.get(position).getName());
         holder.minus.setTag(position);
         holder.name.setTag(position);
+        if (!contacts.get(position).getPhoto().equals("")) {
+            //try {
+            // byte[] photoBlob = contacts.get(position).getPhoto().getBytes("UTF-8");
+            //holder.image.setImageBitmap(BitmapFactory.decodeByteArray(photoBlob, 0, photoBlob.length));
+
+            //            } catch (UnsupportedEncodingException e) {
+            //
+            // }
+
+        }
         holder.minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,19 +72,21 @@ public class PeopleAdapter extends ArrayAdapter<PickedContact> {
                 }
             }
         });
+
         holder.name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int tag = (Integer) view.getTag();
                 if (tag != (contacts.size())) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
+
                     final PickedContact contact = getItem(tag);
 
                     alert.setTitle("Set an emergency message");
                     alert.setMessage("Message");
 
 
-// Set an EditText view to get user input
+                    // Set an EditText view to get user input
                     final EditText input = new EditText(mContext);
                     alert.setView(input);
                     input.setText(contact.getMessage());
@@ -102,4 +115,5 @@ public class PeopleAdapter extends ArrayAdapter<PickedContact> {
 class LocationViewHolder {
     public TextView name;
     public ImageView minus;
+    public ImageView image;
 }
