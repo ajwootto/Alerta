@@ -14,12 +14,12 @@ typedef enum {
 
 } ResourceId;
 static const ResBankVersion APP_RESOURCES = {
-  .crc = 1373029552,
-  .timestamp = 1381055635,
+  .crc = 4193562568,
+  .timestamp = 1381062659,
   .friendly_version = "VERSION"
 };
 
 static const uint32_t resource_crc_table[] = {
-  1373029552,
+  4193562568,
 };
 

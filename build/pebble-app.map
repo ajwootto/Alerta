@@ -27,7 +27,7 @@ Discarded input sections
  .text          0x0000000000000000        0x0 src/alerta.c.1.o
  .bss           0x0000000000000000        0x0 src/alerta.c.1.o
  .text.layer_update_callback
-                0x0000000000000000       0x50 src/alerta.c.1.o
+                0x0000000000000000       0x38 src/alerta.c.1.o
  .text.handle_timer
                 0x0000000000000000        0x2 src/alerta.c.1.o
  .text          0x0000000000000000        0x0 src/http.c.1.o
@@ -223,8 +223,6 @@ Discarded input sections
  .text.text_layer_set_text_color
                 0x0000000000000000        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
  .text.text_layer_set_background_color
-                0x0000000000000000        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
- .text.vibes_double_pulse
                 0x0000000000000000        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
  .text.vibes_enqueue_custom_pattern
                 0x0000000000000000        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
@@ -539,268 +537,274 @@ LOAD /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thum
  .pbl_header    0x0000000000000000       0x7c src/alerta.c.1.o
                 0x0000000000000000                __pbl_app_info
 
-.rodata         0x000000000000007c        0x8
- .rodata        0x000000000000007c        0x8 src/alerta.c.1.o
+.rodata         0x000000000000007c       0x10
+ .rodata        0x000000000000007c       0x10 src/alerta.c.1.o
 
 .rodata.APP_RESOURCES
-                0x0000000000000084       0x18
+                0x000000000000008c       0x18
  .rodata.APP_RESOURCES
-                0x0000000000000084       0x18 src/alerta.c.1.o
+                0x000000000000008c       0x18 src/alerta.c.1.o
 
-.rodata.str1.1  0x000000000000009c       0x6e
+.rodata.str1.1  0x00000000000000a4       0x6b
  .rodata.str1.1
-                0x000000000000009c       0x6e src/alerta.c.1.o
+                0x00000000000000a4       0x6b src/alerta.c.1.o
 
-.text           0x000000000000010c       0x14
+.text           0x0000000000000110       0x14
  *(.text)
- .text          0x000000000000010c       0x14 /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+ .text          0x0000000000000110       0x14 /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
 
-.glue_7         0x0000000000000120        0x0
+.glue_7         0x0000000000000124        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000000120        0x0
+.glue_7t        0x0000000000000124        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000120        0x0
+.vfp11_veneer   0x0000000000000124        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000000120        0x0
+.v4_bx          0x0000000000000124        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000000120        0x0
+.iplt           0x0000000000000124        0x0
  .iplt          0x0000000000000000        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
 
 .text.config_provider
-                0x0000000000000120       0x34
+                0x0000000000000124       0x34
  .text.config_provider
-                0x0000000000000120       0x34 src/alerta.c.1.o
-                0x0000000000000120                config_provider
+                0x0000000000000124       0x34 src/alerta.c.1.o
+                0x0000000000000124                config_provider
 
 .text.up_single_click_handler
-                0x0000000000000154        0x2
+                0x0000000000000158        0x2
  .text.up_single_click_handler
-                0x0000000000000154        0x2 src/alerta.c.1.o
-                0x0000000000000154                up_single_click_handler
+                0x0000000000000158        0x2 src/alerta.c.1.o
+                0x0000000000000158                up_single_click_handler
 
 .text.down_single_click_handler
-                0x0000000000000156        0x2
+                0x000000000000015a        0x2
  .text.down_single_click_handler
-                0x0000000000000156        0x2 src/alerta.c.1.o
-                0x0000000000000156                down_single_click_handler
+                0x000000000000015a        0x2 src/alerta.c.1.o
+                0x000000000000015a                down_single_click_handler
 
 .text.handle_tick
-                0x0000000000000158        0x2
+                0x000000000000015c        0x2
  .text.handle_tick
-                0x0000000000000158        0x2 src/alerta.c.1.o
-                0x0000000000000158                handle_tick
+                0x000000000000015c        0x2 src/alerta.c.1.o
+                0x000000000000015c                handle_tick
 
 .text.handle_deinit
-                0x000000000000015c       0x14
+                0x0000000000000160       0x14
  .text.handle_deinit
-                0x000000000000015c       0x14 src/alerta.c.1.o
-                0x000000000000015c                handle_deinit
-
-.text.app_received_msg
-                0x0000000000000170       0x1c
- .text.app_received_msg
-                0x0000000000000170       0x1c src/alerta.c.1.o
+                0x0000000000000160       0x14 src/alerta.c.1.o
+                0x0000000000000160                handle_deinit
 
 .text.app_send_failed
-                0x000000000000018c       0x1c
+                0x0000000000000174       0x1c
  .text.app_send_failed
-                0x000000000000018c       0x1c src/alerta.c.1.o
+                0x0000000000000174       0x1c src/alerta.c.1.o
+
+.text.app_received_msg
+                0x0000000000000190       0x28
+ .text.app_received_msg
+                0x0000000000000190       0x28 src/alerta.c.1.o
 
 .text.select_single_click_handler
-                0x00000000000001a8       0x58
+                0x00000000000001b8       0x58
  .text.select_single_click_handler
-                0x00000000000001a8       0x58 src/alerta.c.1.o
-                0x00000000000001a8                select_single_click_handler
+                0x00000000000001b8       0x58 src/alerta.c.1.o
+                0x00000000000001b8                select_single_click_handler
 
 .text.register_callbacks
-                0x0000000000000200       0x68
+                0x0000000000000210       0x68
  .text.register_callbacks
-                0x0000000000000200       0x68 src/alerta.c.1.o
-                0x0000000000000200                register_callbacks
+                0x0000000000000210       0x68 src/alerta.c.1.o
+                0x0000000000000210                register_callbacks
 
 .text.handle_init
-                0x0000000000000268       0xc0
+                0x0000000000000278       0xc0
  .text.handle_init
-                0x0000000000000268       0xc0 src/alerta.c.1.o
-                0x0000000000000268                handle_init
+                0x0000000000000278       0xc0 src/alerta.c.1.o
+                0x0000000000000278                handle_init
 
-.text.pbl_main  0x0000000000000328       0x4c
+.text.pbl_main  0x0000000000000338       0x4c
  .text.pbl_main
-                0x0000000000000328       0x4c src/alerta.c.1.o
-                0x0000000000000328                pbl_main
+                0x0000000000000338       0x4c src/alerta.c.1.o
+                0x0000000000000338                pbl_main
 
 .text.app_event_loop
-                0x0000000000000374        0xc
+                0x0000000000000384        0xc
  .text.app_event_loop
-                0x0000000000000374        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000374                app_event_loop
+                0x0000000000000384        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000384                app_event_loop
 
 .text.bmp_init_container
-                0x0000000000000380        0xc
+                0x0000000000000390        0xc
  .text.bmp_init_container
-                0x0000000000000380        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000380                bmp_init_container
+                0x0000000000000390        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000390                bmp_init_container
 
 .text.bmp_deinit_container
-                0x000000000000038c        0xc
+                0x000000000000039c        0xc
  .text.bmp_deinit_container
-                0x000000000000038c        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x000000000000038c                bmp_deinit_container
+                0x000000000000039c        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x000000000000039c                bmp_deinit_container
 
 .text.fonts_get_system_font
-                0x0000000000000398        0xc
+                0x00000000000003a8        0xc
  .text.fonts_get_system_font
-                0x0000000000000398        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000398                fonts_get_system_font
+                0x00000000000003a8        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003a8                fonts_get_system_font
 
 .text.layer_add_child
-                0x00000000000003a4        0xc
+                0x00000000000003b4        0xc
  .text.layer_add_child
-                0x00000000000003a4        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003a4                layer_add_child
+                0x00000000000003b4        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003b4                layer_add_child
 
 .text.resource_init_current_app
-                0x00000000000003b0        0xc
+                0x00000000000003c0        0xc
  .text.resource_init_current_app
-                0x00000000000003b0        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003b0                resource_init_current_app
+                0x00000000000003c0        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003c0                resource_init_current_app
 
 .text.window_init
-                0x00000000000003bc        0xc
+                0x00000000000003cc        0xc
  .text.window_init
-                0x00000000000003bc        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003bc                window_init
+                0x00000000000003cc        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003cc                window_init
 
 .text.window_stack_push
-                0x00000000000003c8        0xc
+                0x00000000000003d8        0xc
  .text.window_stack_push
-                0x00000000000003c8        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003c8                window_stack_push
+                0x00000000000003d8        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003d8                window_stack_push
 
 .text.window_set_click_config_provider
-                0x00000000000003d4        0xc
+                0x00000000000003e4        0xc
  .text.window_set_click_config_provider
-                0x00000000000003d4        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003d4                window_set_click_config_provider
+                0x00000000000003e4        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003e4                window_set_click_config_provider
 
 .text.text_layer_init
-                0x00000000000003e0        0xc
+                0x00000000000003f0        0xc
  .text.text_layer_init
-                0x00000000000003e0        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003e0                text_layer_init
+                0x00000000000003f0        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003f0                text_layer_init
 
 .text.text_layer_set_text
-                0x00000000000003ec        0xc
+                0x00000000000003fc        0xc
  .text.text_layer_set_text
-                0x00000000000003ec        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003ec                text_layer_set_text
+                0x00000000000003fc        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x00000000000003fc                text_layer_set_text
 
 .text.text_layer_set_font
-                0x00000000000003f8        0xc
+                0x0000000000000408        0xc
  .text.text_layer_set_font
-                0x00000000000003f8        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x00000000000003f8                text_layer_set_font
+                0x0000000000000408        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000408                text_layer_set_font
+
+.text.vibes_double_pulse
+                0x0000000000000414        0xc
+ .text.vibes_double_pulse
+                0x0000000000000414        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000414                vibes_double_pulse
 
 .text.text_layer_set_text_alignment
-                0x0000000000000404        0xc
+                0x0000000000000420        0xc
  .text.text_layer_set_text_alignment
-                0x0000000000000404        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000404                text_layer_set_text_alignment
+                0x0000000000000420        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000420                text_layer_set_text_alignment
 
 .text.app_message_register_callbacks
-                0x0000000000000410        0xc
+                0x000000000000042c        0xc
  .text.app_message_register_callbacks
-                0x0000000000000410        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000410                app_message_register_callbacks
+                0x000000000000042c        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x000000000000042c                app_message_register_callbacks
 
 .text.app_message_deregister_callbacks
-                0x000000000000041c        0xc
+                0x0000000000000438        0xc
  .text.app_message_deregister_callbacks
-                0x000000000000041c        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x000000000000041c                app_message_deregister_callbacks
+                0x0000000000000438        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000438                app_message_deregister_callbacks
 
 .text.app_message_out_get
-                0x0000000000000428        0xc
+                0x0000000000000444        0xc
  .text.app_message_out_get
-                0x0000000000000428        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000428                app_message_out_get
+                0x0000000000000444        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000444                app_message_out_get
 
 .text.app_message_out_send
-                0x0000000000000434        0xc
+                0x0000000000000450        0xc
  .text.app_message_out_send
-                0x0000000000000434        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000434                app_message_out_send
+                0x0000000000000450        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000450                app_message_out_send
 
 .text.app_message_out_release
-                0x0000000000000440        0xc
+                0x000000000000045c        0xc
  .text.app_message_out_release
-                0x0000000000000440        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000440                app_message_out_release
+                0x000000000000045c        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x000000000000045c                app_message_out_release
 
 .text.dict_write_end
-                0x000000000000044c        0xc
+                0x0000000000000468        0xc
  .text.dict_write_end
-                0x000000000000044c        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x000000000000044c                dict_write_end
+                0x0000000000000468        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000468                dict_write_end
 
 .text.dict_write_tuplet
-                0x0000000000000458        0xc
+                0x0000000000000474        0xc
  .text.dict_write_tuplet
-                0x0000000000000458        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000458                dict_write_tuplet
+                0x0000000000000474        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000474                dict_write_tuplet
 
-.text.memset    0x0000000000000464        0xc
- .text.memset   0x0000000000000464        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
-                0x0000000000000464                memset
+.text.memset    0x0000000000000480        0xc
+ .text.memset   0x0000000000000480        0xc /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+                0x0000000000000480                memset
 
-.rel.dyn        0x0000000000000470        0x0
+.rel.dyn        0x000000000000048c        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
  .rel.got       0x0000000000000000        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
 
-.data           0x0000000000000470        0x4
+.data           0x000000000000048c        0x4
  *(.data)
- .data          0x0000000000000470        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
- .data          0x0000000000000470        0x4 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtbegin.o
-                0x0000000000000470                __dso_handle
- .data          0x0000000000000474        0x0 src/alerta.c.1.o
- .data          0x0000000000000474        0x0 src/http.c.1.o
- .data          0x0000000000000474        0x0 src/mini-printf.c.1.o
- .data          0x0000000000000474        0x0 /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
- .data          0x0000000000000474        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtend.o
- .data          0x0000000000000474        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
+ .data          0x000000000000048c        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
+ .data          0x000000000000048c        0x4 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtbegin.o
+                0x000000000000048c                __dso_handle
+ .data          0x0000000000000490        0x0 src/alerta.c.1.o
+ .data          0x0000000000000490        0x0 src/http.c.1.o
+ .data          0x0000000000000490        0x0 src/mini-printf.c.1.o
+ .data          0x0000000000000490        0x0 /Users/Adam/code/PebbleTest/lib/libpebble.a(tmpHZgwt9pebble_os.o)
+ .data          0x0000000000000490        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtend.o
+ .data          0x0000000000000490        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
 
-.igot.plt       0x0000000000000474        0x0
+.igot.plt       0x0000000000000490        0x0
  .igot.plt      0x0000000000000000        0x0 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
 
-.got            0x0000000000000474        0xc
- .got           0x0000000000000474        0xc /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
+.got            0x0000000000000490        0xc
+ .got           0x0000000000000490        0xc /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
 
-.got.plt        0x0000000000000480        0xc
- .got.plt       0x0000000000000480        0xc /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
-                0x0000000000000480                _GLOBAL_OFFSET_TABLE_
+.got.plt        0x000000000000049c        0xc
+ .got.plt       0x000000000000049c        0xc /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
+                0x000000000000049c                _GLOBAL_OFFSET_TABLE_
 
-.bss            0x000000000000048c       0xec
+.bss            0x00000000000004a8       0xec
  *(.bss)
- COMMON         0x000000000000048c       0xec src/alerta.c.1.o
-                0x000000000000048c                timer_handle
-                0x0000000000000490                rapeText
-                0x00000000000004c8                image
-                0x000000000000050c                str
-                0x0000000000000520                window
+ COMMON         0x00000000000004a8       0xec src/alerta.c.1.o
+                0x00000000000004a8                timer_handle
+                0x00000000000004ac                rapeText
+                0x00000000000004e4                image
+                0x0000000000000528                str
+                0x000000000000053c                window
 
 .bss.app_callbacks
-                0x0000000000000578       0x1c
+                0x0000000000000594       0x1c
  .bss.app_callbacks
-                0x0000000000000578       0x1c src/alerta.c.1.o
+                0x0000000000000594       0x1c src/alerta.c.1.o
 
 .bss.callbacks_registered
-                0x0000000000000594        0x1
+                0x00000000000005b0        0x1
  .bss.callbacks_registered
-                0x0000000000000594        0x1 src/alerta.c.1.o
+                0x00000000000005b0        0x1 src/alerta.c.1.o
 
 DISCARD
  libc.a(*)
@@ -836,26 +840,26 @@ OUTPUT(/Users/Adam/code/PebbleTest/build/pebble-app.elf elf32-littlearm)
  .comment       0x0000000000000000       0x4f src/mini-printf.c.1.o
  .comment       0x0000000000000000       0x4f /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtend.o
 
-.debug_line     0x0000000000000000      0x8e5
+.debug_line     0x0000000000000000      0x8dc
  .debug_line    0x0000000000000000       0x71 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
- .debug_line    0x0000000000000071      0x261 src/alerta.c.1.o
- .debug_line    0x00000000000002d2      0x3d8 src/http.c.1.o
- .debug_line    0x00000000000006aa      0x1c6 src/mini-printf.c.1.o
- .debug_line    0x0000000000000870       0x75 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
+ .debug_line    0x0000000000000071      0x258 src/alerta.c.1.o
+ .debug_line    0x00000000000002c9      0x3d8 src/http.c.1.o
+ .debug_line    0x00000000000006a1      0x1c6 src/mini-printf.c.1.o
+ .debug_line    0x0000000000000867       0x75 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
 
-.debug_info     0x0000000000000000     0x2fa2
+.debug_info     0x0000000000000000     0x2f95
  .debug_info    0x0000000000000000       0xb2 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
- .debug_info    0x00000000000000b2     0x1731 src/alerta.c.1.o
- .debug_info    0x00000000000017e3     0x132a src/http.c.1.o
- .debug_info    0x0000000000002b0d      0x3e3 src/mini-printf.c.1.o
- .debug_info    0x0000000000002ef0       0xb2 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
+ .debug_info    0x00000000000000b2     0x1724 src/alerta.c.1.o
+ .debug_info    0x00000000000017d6     0x132a src/http.c.1.o
+ .debug_info    0x0000000000002b00      0x3e3 src/mini-printf.c.1.o
+ .debug_info    0x0000000000002ee3       0xb2 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
 
-.debug_abbrev   0x0000000000000000      0x7c4
+.debug_abbrev   0x0000000000000000      0x7d9
  .debug_abbrev  0x0000000000000000       0x12 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
- .debug_abbrev  0x0000000000000012      0x2bf src/alerta.c.1.o
- .debug_abbrev  0x00000000000002d1      0x319 src/http.c.1.o
- .debug_abbrev  0x00000000000005ea      0x1c8 src/mini-printf.c.1.o
- .debug_abbrev  0x00000000000007b2       0x12 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
+ .debug_abbrev  0x0000000000000012      0x2d4 src/alerta.c.1.o
+ .debug_abbrev  0x00000000000002e6      0x319 src/http.c.1.o
+ .debug_abbrev  0x00000000000005ff      0x1c8 src/mini-printf.c.1.o
+ .debug_abbrev  0x00000000000007c7       0x12 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
 
 .debug_aranges  0x0000000000000000      0x1f8
  .debug_aranges
@@ -876,20 +880,20 @@ OUTPUT(/Users/Adam/code/PebbleTest/build/pebble-app.elf elf32-littlearm)
  .debug_ranges  0x0000000000000210       0x48 src/mini-printf.c.1.o
  .debug_ranges  0x0000000000000258       0x20 /Users/Adam/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
 
-.debug_loc      0x0000000000000000     0x1596
- .debug_loc     0x0000000000000000      0x1ba src/alerta.c.1.o
- .debug_loc     0x00000000000001ba      0xeef src/http.c.1.o
- .debug_loc     0x00000000000010a9      0x4ed src/mini-printf.c.1.o
+.debug_loc      0x0000000000000000     0x15c1
+ .debug_loc     0x0000000000000000      0x1e5 src/alerta.c.1.o
+ .debug_loc     0x00000000000001e5      0xeef src/http.c.1.o
+ .debug_loc     0x00000000000010d4      0x4ed src/mini-printf.c.1.o
 
-.debug_str      0x0000000000000000     0x1543
- .debug_str     0x0000000000000000      0xddb src/alerta.c.1.o
-                                        0xf13 (size before relaxing)
- .debug_str     0x0000000000000ddb      0x6bb src/http.c.1.o
+.debug_str      0x0000000000000000     0x1537
+ .debug_str     0x0000000000000000      0xdcf src/alerta.c.1.o
+                                        0xf07 (size before relaxing)
+ .debug_str     0x0000000000000dcf      0x6bb src/http.c.1.o
                                         0xa9e (size before relaxing)
- .debug_str     0x0000000000001496       0xad src/mini-printf.c.1.o
+ .debug_str     0x000000000000148a       0xad src/mini-printf.c.1.o
                                         0x179 (size before relaxing)
 
-.debug_frame    0x0000000000000000      0x4dc
- .debug_frame   0x0000000000000000      0x12c src/alerta.c.1.o
- .debug_frame   0x000000000000012c      0x308 src/http.c.1.o
- .debug_frame   0x0000000000000434       0xa8 src/mini-printf.c.1.o
+.debug_frame    0x0000000000000000      0x4e0
+ .debug_frame   0x0000000000000000      0x130 src/alerta.c.1.o
+ .debug_frame   0x0000000000000130      0x308 src/http.c.1.o
+ .debug_frame   0x0000000000000438       0xa8 src/mini-printf.c.1.o

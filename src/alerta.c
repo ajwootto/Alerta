@@ -53,18 +53,7 @@ void layer_update_callback(Layer *me, GContext* ctx) {
   // are equal to the size of the bitmap--otherwise the image
   // will automatically tile. Which might be what *you* want.
 
-  GRect destination = layer_get_frame(&image.layer.layer);
-
-  destination.origin.y = 5;
-  destination.origin.x = 5;
-
-  graphics_draw_bitmap_in_rect(ctx, &image.bmp, destination);
-
-
-  destination.origin.x = 80;
-  destination.origin.y = 60;
-
-  graphics_draw_bitmap_in_rect(ctx, &image.bmp, destination);
+  graphics_draw_bitmap_in_rect(ctx, &image.bmp, GRect(100, 100, 20, 20));
 }
 
 
@@ -137,16 +126,17 @@ void handle_init(AppContextRef ctx) {
 
   window_init(&window, "Window Name");
   window_stack_push(&window, true /* Animated */);  
-  text_layer_init(&rapeText, GRect(0, 85, 144, 30));
+  text_layer_init(&rapeText, GRect(0, 120, 144, 30));
   text_layer_set_text_alignment(&rapeText, GTextAlignmentCenter);
   text_layer_set_font(&rapeText, fonts_get_system_font(FONT_KEY_ROBOTO_CONDENSED_21));
-  layer_add_child(&window.layer, &rapeText.layer);
-  text_layer_set_text(&rapeText, "Press if Raped lol");
+  text_layer_set_text(&rapeText, "Press for Alert");
   window_set_click_config_provider(&window, (ClickConfigProvider) config_provider);
   
   resource_init_current_app(&APP_RESOURCES);
   bmp_init_container(RESOURCE_ID_ALERTA_ICON, &image);
   layer_add_child(&window.layer, &image.layer.layer);
+  layer_add_child(&window.layer, &rapeText.layer);
+
   register_callbacks();
 
 }
