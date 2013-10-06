@@ -7,44 +7,56 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:background="@android:color/background_dark"
+    android:background="#ececec"
     >
 
     <Button
             android:layout_width="130dip"
             android:layout_height="50dip"
-            android:text="Alert Contacts! "
+            android:text="Alert Contacts of an Emergency"
             android:id="@+id/alertbutton"
-            android:background="#ff0000"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:background="#db2828"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/listView"
-            android:layout_toRightOf="@+id/contactButtons"/>
+            android:layout_alignParentLeft="true"
+            android:gravity="center"/>
 
     <Button
             android:layout_width="130dip"
             android:layout_height="50dip"
-            android:text="Add Contact"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="30dp"
+            android:background="#12a976"
+            android:text="Add Emergency Contact"
             android:id="@+id/contactButtons"
-            android:layout_alignTop="@+id/alertbutton"
-            android:layout_alignLeft="@+id/listView"/>
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/listView"
+            android:layout_alignRight="@+id/listView"
+            android:gravity="center_vertical|left"/>
 
     <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/listView"
-            android:divider="@android:drawable/divider_horizontal_textfield"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_above="@+id/contactButtons"/>
+            android:dividerHeight="15dip"
+            android:divider="@android:color/transparent"
+            android:layout_below="@+id/contactButtons"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/alertbutton"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:layout_marginBottom="15dp"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_height="wrap_content"
             android:text="In the case of an emergency, we will send a message to the contacts of your choosing. Add a contact, then click them to add a message."
             android:id="@+id/textView"
+            android:background="#11a775"
             android:layout_alignRight="@+id/listView"
             android:layout_alignParentTop="true"/>
 

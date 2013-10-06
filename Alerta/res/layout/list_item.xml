@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/background_dark"
-        android:layout_gravity="left">
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+        android:layout_gravity="left"
+        >
 
 
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:padding="20dp"
         android:text="Valentin Tstatskin"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
+        android:textColor="#686868"
         android:gravity="center_vertical|left"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/imageView"/>
 
-    <LinearLayout android:layout_width="fill_parent"
-                  android:layout_height="1dp"
-                  android:layout_below="@id/name"
-                  android:background="@android:color/background_light"
-                  android:focusable="false"
-                  android:id="@+id/linearLayout"></LinearLayout>
+    <LinearLayout android:layout_height="70dp"
+                  android:layout_width="30dp"
+                  android:background="#11a775"
+                  android:layout_marginRight="10dp"
+                  android:id="@+id/linearLayout2"></LinearLayout>
+
 
     <ImageView
             android:layout_width="65dip"
             android:padding="5dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dip"
             android:id="@+id/imageView"
             android:src="@drawable/deficon"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignBottom="@+id/linearLayout"/>
+            android:layout_toRightOf="@+id/linearLayout2"/>
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:padding="20dp"
+            android:layout_width="40dp"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:id="@+id/minusButton"
             android:src="@drawable/minusicon"
             android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/name"/>
 
 </RelativeLayout>
