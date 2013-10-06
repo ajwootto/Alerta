@@ -8,9 +8,22 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.hackmit.alerta.adapters.PeopleAdapter;
+import com.hackmit.alerta.datatypes.PickedContact;
+import com.hackmit.alerta.utils.PreferenceUtils;
+import com.vicv.promises.Promise;
+import com.vicv.promises.PromiseListener;
+
+import java.util.ArrayList;
+
 public class MainActivity extends Activity {
+
+    private ArrayList<PickedContact> _contacts = new ArrayList<PickedContact>();
+    private ListView _listView;
+    private PeopleAdapter _adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +31,26 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ((Button) findViewById(R.id.contactButtons)).setOnClickListener(contactsClick());
+        _listView = (ListView) findViewById(R.id.listView);
+
+        Promise<ArrayList<PickedContact>> contactPromise = PreferenceUtils.loadSavedContacts(this);
+        contactPromise.add(new PromiseListener<ArrayList<PickedContact>>() {
+            @Override
+            public void succeeded(ArrayList<PickedContact> result) {
+                _contacts = result;
+                setupListView();
+                super.succeeded();
+            }
+        });
     }
 
+
+    private void setupListView() {
+        _adapter = new PeopleAdapter(this,
+                R.layout.list_item, _contacts, this
+                .getLayoutInflater());
+        _listView.setAdapter(_adapter);
+    }
 
     private View.OnClickListener contactsClick() {
         return new View.OnClickListener() {
@@ -34,8 +65,8 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         String name = "";
-        String cNumber ="";
-        String email ="";
+        String number = "";
+        String email = "";
 
         if (resultCode == Activity.RESULT_OK) {
             Uri contactData = data.getData();
@@ -57,21 +88,21 @@ public class MainActivity extends Activity {
                             ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id,
                             null, null);
                     phones.moveToFirst();
-                    cNumber = phones.getString(phones.getColumnIndex("data1"));
-                    Toast.makeText(this, cNumber, Toast.LENGTH_SHORT).show();
+                    number = phones.getString(phones.getColumnIndex("data1"));
+                    Toast.makeText(this, number, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "aint got no shit", Toast.LENGTH_SHORT).show();
                 }
 
                 //Sloppity slop
                 try {
-                    Cursor Emails = getContentResolver().query(
+                    Cursor emails = getContentResolver().query(
                             ContactsContract.CommonDataKinds.Email.CONTENT_URI, null,
                             ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = " + id,
                             null, null);
-                    Emails.moveToFirst();
-                    email = Emails.getString(
-                            Emails.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
+                    emails.moveToFirst();
+                    email = emails.getString(
+                            emails.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
                     Toast.makeText(this, email, Toast.LENGTH_SHORT).show();
 
                 } catch (Exception e) {
@@ -79,6 +110,19 @@ public class MainActivity extends Activity {
                 }
 
             }
+            PickedContact newContact = new PickedContact(name, number, email, "");
+
+            Promise<ArrayList<PickedContact>> updatePromise = PreferenceUtils.storeContact(newContact, this);
+            updatePromise.add(new PromiseListener<ArrayList<PickedContact>>(){
+                @Override
+                public void succeeded(ArrayList<PickedContact> result) {
+                    _contacts = result;
+                    _adapter.notifyDataSetChanged();
+                    super.succeeded(result);
+                }
+            });
+
+
             super.onActivityResult(requestCode, resultCode, data);
         }
     }

@@ -14,7 +14,7 @@ public class PickedContact {
     String _message = "";
 
 
-    PickedContact(String name, String number, String email, String message){
+   public PickedContact(String name, String number, String email, String message){
         this._name = name;
         this._number = number;
         this._email = email;
