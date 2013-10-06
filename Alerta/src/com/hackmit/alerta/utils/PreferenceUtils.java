@@ -61,6 +61,16 @@ public class PreferenceUtils {
         }
     }
 
+    public static Promise<ArrayList<PickedContact>> updateContactMessage(PickedContact contact, Context c) {
+        if (!contacts.contains(contact)) {
+            contacts.add(contact);
+        } else {
+            contacts.get(contacts.indexOf(contact)).setMessage(contact.getMessage());
+        }
+        return storeContacts(c);
+
+    }
+
     public static Promise<ArrayList<PickedContact>> removeContact(PickedContact contact, Context c) {
         contacts.remove(contact);
         return storeContacts(c);

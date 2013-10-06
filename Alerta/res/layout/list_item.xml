@@ -2,30 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_dark" >
+    android:background="@android:color/background_dark"
+        android:layout_gravity="left">
 
-    <LinearLayout android:layout_width="fill_parent"
-                  android:layout_height="1dp"
-                  android:background="@android:color/background_light"
-                  ></LinearLayout>
+
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="21dp"
-        android:padding="10dp"
+        android:padding="20dp"
         android:text="Valentin Tstatskin"
-        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_alignParentLeft="true"
         android:textColor="@android:color/white"
-        android:layout_alignParentTop="true"/>
+        android:gravity="center_vertical|left"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView"/>
 
     <LinearLayout android:layout_width="fill_parent"
                   android:layout_height="1dp"
                   android:layout_below="@id/name"
                   android:background="@android:color/background_light"
-            ></LinearLayout>
+                  android:focusable="false"
+                  android:id="@+id/linearLayout"></LinearLayout>
+
+    <ImageView
+            android:layout_width="60dip"
+            android:layout_height="30dip"
+            android:scaleType="fitXY"
+            android:id="@+id/imageView"
+            android:src="@drawable/icon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/linearLayout"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:padding="20dp"
+
+            android:layout_height="wrap_content"
+            android:id="@+id/minusButton"
+            android:src="@drawable/minusicon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

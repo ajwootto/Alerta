@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -31,6 +32,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ((Button) findViewById(R.id.contactButtons)).setOnClickListener(contactsClick());
+        ((Button) findViewById(R.id.alertbutton)).setOnClickListener(emergencyClick());
         _listView = (ListView) findViewById(R.id.listView);
 
         Promise<ArrayList<PickedContact>> contactPromise = PreferenceUtils.loadSavedContacts(this);
@@ -50,6 +52,26 @@ public class MainActivity extends Activity {
                 R.layout.list_item, _contacts, this
                 .getLayoutInflater());
         _listView.setAdapter(_adapter);
+    }
+
+    private View.OnClickListener emergencyClick() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (PickedContact contact : _contacts) {
+                    try {
+                        if (!contact.getNumber().equals("") && !contact.getMessage().equals("")) {
+                            SmsManager smsManager = SmsManager.getDefault();
+                            smsManager.sendTextMessage(contact.getNumber(), null, contact.getMessage(), null, null);
+                            Toast.makeText(getApplicationContext(), "SMS Sent to "+contact.getName(),
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "SMS sent to" +contact.getNumber()+" failed due to "+e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+        };
     }
 
     private View.OnClickListener contactsClick() {
@@ -73,7 +95,6 @@ public class MainActivity extends Activity {
             Cursor c = managedQuery(contactData, null, null, null, null);
             if (c.moveToFirst()) {
                 name = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts.DISPLAY_NAME));
-                Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
 
                 String id =
                         c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
@@ -89,9 +110,7 @@ public class MainActivity extends Activity {
                             null, null);
                     phones.moveToFirst();
                     number = phones.getString(phones.getColumnIndex("data1"));
-                    Toast.makeText(this, number, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "aint got no shit", Toast.LENGTH_SHORT).show();
                 }
 
                 //Sloppity slop
@@ -103,8 +122,6 @@ public class MainActivity extends Activity {
                     emails.moveToFirst();
                     email = emails.getString(
                             emails.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
-                    Toast.makeText(this, email, Toast.LENGTH_SHORT).show();
-
                 } catch (Exception e) {
 
                 }
@@ -113,7 +130,7 @@ public class MainActivity extends Activity {
             PickedContact newContact = new PickedContact(name, number, email, "");
 
             Promise<ArrayList<PickedContact>> updatePromise = PreferenceUtils.storeContact(newContact, this);
-            updatePromise.add(new PromiseListener<ArrayList<PickedContact>>(){
+            updatePromise.add(new PromiseListener<ArrayList<PickedContact>>() {
                 @Override
                 public void succeeded(ArrayList<PickedContact> result) {
                     _contacts = result;

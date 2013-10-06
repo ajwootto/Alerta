@@ -11,19 +11,42 @@
     >
 
     <Button
-            android:layout_width="200dip"
+            android:layout_width="130dip"
+            android:layout_height="50dip"
+            android:text="Alert Contacts! "
+            android:id="@+id/alertbutton"
+            android:background="#ff0000"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/listView"
+            android:layout_toRightOf="@+id/contactButtons"/>
+
+    <Button
+            android:layout_width="130dip"
             android:layout_height="50dip"
             android:text="Add Contact"
             android:id="@+id/contactButtons"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_alignTop="@+id/alertbutton"
+            android:layout_alignLeft="@+id/listView"/>
 
     <ListView
-            android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/listView"
-            android:layout_below="@+id/contactButtons"
+            android:divider="@android:drawable/divider_horizontal_textfield"
+            android:layout_below="@+id/textView"
             android:layout_alignParentLeft="true"
-            android:divider="@android:drawable/divider_horizontal_textfield"/>
+            android:layout_above="@+id/contactButtons"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content"
+            android:text="In the case of an emergency, we will send a message to the contacts of your choosing. Add a contact, then click them to add a message."
+            android:id="@+id/textView"
+            android:layout_alignRight="@+id/listView"
+            android:layout_alignParentTop="true"/>
+
+
 </RelativeLayout>
