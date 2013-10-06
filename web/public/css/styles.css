@@ -1,0 +1,107 @@
+html {
+	background: url( ../img/sketchy_alleyway_blur.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	display: block;
+}
+
+body {
+	min-width: 530px; 
+	background-color: transparent;
+}
+
+.header {
+	text-align: right; 
+	display: block;
+	position: absolute;
+	right: 70px;
+}
+
+#title {
+	font-family: "Century Gothic", sans-serif;
+	letter-spacing: 2.5px; 
+	font-size: 150px;
+	margin-top: 250px;
+	color: rgb(255, 255, 255);
+}
+
+#tagline {
+	font-family: "Century Gothic", sans-serif;
+	font-size: 39px;
+	color: rgb(255, 255, 255);
+}
+
+.registration_form {
+	text-align: left; 
+	margin-top: 0px; 
+	height: 900px;
+	width: 400px;
+	background: rgba(170, 170, 170, 0.5);
+}
+
+form {
+	width: 100%;
+	padding-top: 35px; 
+	text-align: center;
+	font-family: "Avenir", sans-serif;
+}
+
+*:focus { outline:none; }
+
+input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.user_info {
+	margin-top: 30px; 
+}
+	.customer_firstname , .customer_lastname , .customer_email {
+		margin-top: 20px;
+		width: 75%; 
+		height: 40px; 
+		border-radius: 3px; 
+		padding-left: 6px; 
+		font-size: 20px;
+		border: 0px; 
+		color: #181717;
+	}
+
+#signup_header {
+	margin-top: 20px;
+	text-align: left; 
+	margin-left: 50px; 
+	height: 30px;
+	width: 80%; 
+	font-size: 23px;
+	color: #fff;
+}
+.Alerta_blurb {
+	margin-left: 34px;
+	width: 82%; 
+	text-align: center; 
+	color: #181717;
+}
+
+#first_blurb {
+	font-size: 30px;
+}
+
+#second_blurb {
+	margin-top: 50px; 
+	font-size: 22px; 
+	display: block;
+}
+
+.signup_button {
+	margin-top: 30px; 
+	width: 25%;
+	padding: 5px;
+	height: 35px; 
+	border-radius: 3px;
+	font-size: 20px;
+	border: 0px; 
+	color: #181717;
+	background-color: #C0A492;
+}

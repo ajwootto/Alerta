@@ -1,0 +1,21 @@
+Git Commands 
+
+git status: shows changes 
+
+git diff: shows differences, 'q' to quit 
+
+git add . 
+
+git commit -m "some kind of message"
+
+git push: pushes stuff to github 
+
+git push heroku
+
+git log: gets you log of all commits 
+
+git checkout ###: allows you to check out state of commit ###
+
+git pull origin master: pulls most recent commit 
+
+ifconfig: get ip address
