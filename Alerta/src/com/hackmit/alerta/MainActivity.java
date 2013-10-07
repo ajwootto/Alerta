@@ -34,7 +34,6 @@ public class MainActivity extends Activity {
     private final static int CMD_UP = 0x01;
     private PebbleKit.PebbleDataReceiver dataReceiver;
     private Handler mHandler;
-
     private ListView _listView;
     private PeopleAdapter _adapter;
 
@@ -188,71 +187,54 @@ public class MainActivity extends Activity {
             if (c.moveToFirst()) {
                 name = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts.DISPLAY_NAME));
 
-                String id =
-                        c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
+                String id = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
 
-                String hasPhone =
-                        c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
+                String hasPhone = c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
 
-                final String photoId = c.getString(
-                        c.getColumnIndex(ContactsContract.Contacts.PHOTO_ID));
+                final String photoId = c.getString(c.getColumnIndex(ContactsContract.Contacts.PHOTO_ID));
 
                 // Get photo data for this contact
                 if (photoId != null) {
                     final Cursor photo = managedQuery(
                             ContactsContract.Data.CONTENT_URI,
-                            new String[]{ContactsContract.Contacts.Photo.PHOTO}, // column for the photo blob
-                            ContactsContract.Data._ID + "=?", // select row by id
-                            new String[]{photoId}, // filter by photoId
-                            null
-                    );
+                            new String[]{ContactsContract.Contacts.Photo.PHOTO},
+                            ContactsContract.Data._ID + "=?",
+                            new String[]{photoId}, null);
 
-                    // Convert photo blob to a bitmap
                     if (photo.moveToFirst()) {
-                        byte[] photoBlob = photo.getBlob(
-                                photo.getColumnIndex(ContactsContract.Contacts.Photo.PHOTO));
-
+                        byte[] photoBlob = photo.getBlob(photo.getColumnIndex(ContactsContract.Contacts.Photo.PHOTO));
                         try {
                             image = new String(photoBlob, "UTF-8");
                         } catch (UnsupportedEncodingException e) {
-                            //whatever its a hackathon
                         }
-
-
                     }
-
-
                 }
 
+                //Get phone number data for contact
                 if (hasPhone.equalsIgnoreCase("1")) {
                     Cursor phones = getContentResolver().query(
                             ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
-                            ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id,
-                            null, null);
+                            ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id, null, null);
                     phones.moveToFirst();
                     number = phones.getString(phones.getColumnIndex("data1"));
-                } else {
                 }
 
-                //Sloppity slop
+                //Get email data for contact
                 try {
                     Cursor emails = getContentResolver().query(
                             ContactsContract.CommonDataKinds.Email.CONTENT_URI, null,
-                            ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = " + id,
-                            null, null);
+                            ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = " + id, null, null);
                     emails.moveToFirst();
-                    email = emails.getString(
-                            emails.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
+                    email = emails.getString(emails.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
                 } catch (Exception e) {
 
                 }
             }
-
-
         }
         PickedContact newContact = new PickedContact(name, number, email, "", image);
 
         Promise<ArrayList<PickedContact>> updatePromise = PreferenceUtils.storeContact(newContact, this);
+
         updatePromise.add(new PromiseListener<ArrayList<PickedContact>>() {
             @Override
             public void succeeded(ArrayList<PickedContact> result) {
